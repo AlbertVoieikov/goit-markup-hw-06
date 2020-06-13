@@ -68,6 +68,42 @@
         </div>
       </section>
 
+      <!-- форма для связи -->
+
+      <form class="form">
+        <p class="form-title">Оставьте свои данные, мы с вами свяжемся</p>
+
+        <div class="form-field">
+          <label for="name">Имя</label>
+          <input type="text" type="name" id="name" />
+        </div>
+
+        <div class="form-field">
+          <label for="tel">Телефон</label>
+          <input type="tel" name="tel" id="tel" />
+        </div>
+
+        <div class="form-field">
+          <label for="mail">Почта</label>
+          <input type="email" name="mail" id="mail" />
+        </div>
+
+        <div class="form-field">
+          <label for="ccoment">Коментарий</label>
+          <textarea name="ccoment" id="ccoment" rows="10"></textarea>
+        </div>
+
+        <div class="form-field">
+          <input type="checkbox" name="policy" id="policy" />
+          <label for="policy"
+            >Соглашаюсь с рассылкой и принимаю
+            <a href="">Условия договора</a>
+          </label>
+        </div>
+
+        <button type="submit">Отправить</button>
+      </form>
+
       <!--section soft-tech skils-->
       <section class="skills">
         <div class="container sec-pad">
@@ -471,6 +507,20 @@
           </div>
           <div class="footer-subscribe">
             <h6 class="footer-title list">подписаться на рассылку</h6>
+            <form class="footer-form">
+              <input
+                type="mail"
+                name="E-mail"
+                placeholder="E-mail"
+                class="e-mail"
+              />
+              <!-- <a href="" class="footer-btn list"> </a>-->
+              <button type="submit" class="footer-btn list">Подписаться</button>
+
+              <svg class="icon-send">
+                <use href="./images/symbol-defs.svg#icon-send"></use>
+              </svg>
+            </form>
           </div>
         </div>
 
