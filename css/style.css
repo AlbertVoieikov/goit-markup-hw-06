@@ -12,7 +12,7 @@ ul {
 }
 
 img {
-  display: block;
+  display: inline-block;
 }
 
 textarea {
@@ -245,15 +245,15 @@ textarea {
 /* communication form */
 
 .form {
-  position: absolute;
+  /* position: absolute; */
   margin-left: auto;
   margin-right: auto;
   padding: 40px;
 
   width: 550px;
 
-  left: 536px;
-  top: 221px;
+  /* left: 536px;
+  top: 221px; */
 
   background: #ffffff;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -266,7 +266,7 @@ textarea {
   margin-bottom: 30px;
   font-weight: 700;
   font-size: 20px;
-  line-height: 0.87;
+  line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
 
@@ -274,12 +274,15 @@ textarea {
 }
 
 .form-field {
-  display: flex;
-  flex-direction: column;
+  position: relative;
   margin-bottom: 30px;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+}
+
+.form-field:focus {
+  border: 1px solid #2196f3;
 }
 
 .form-field input {
@@ -287,16 +290,113 @@ textarea {
   padding: 12px 42px;
 }
 
+.form-input {
+  margin: 0;
+
+  width: 100%;
+
+  font: inherit;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.form-label {
+  position: absolute;
+  top: 50%;
+  left: 45px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+
+  color: #757575;
+
+  transform: translateY(-50%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+
+  transform: translateY(-50%);
+
+  width: 18px;
+  height: 18px;
+  fill: #212121;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:focus ~ .form-icon {
+  fill: #2196f3;
+}
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  color: #2196f3;
+  border-color: #2196f3;
+
+  transform: translate(-32px, -40px);
+}
+
+.form-checkbox {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.policy {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+
+  letter-spacing: 0.03em;
+
+  color: #757575;
+}
+
+.policy-link {
+  color: #2196f3;
+}
+
+.form-submit {
+  text-align: center;
+}
+
+.submit {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  padding: 10px 56px;
+
+  color: #fff;
+  background-color: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border-color: #2196f3;
+}
+
+.submit:hover,
+.submit:focus {
+  cursor: pointer;
+}
+
 /* skills */
 
-.background {
+.tint {
   display: flex;
   justify-content: center;
   padding: 25px 100px;
   margin-bottom: 30px;
 
-  background: #f5f4fa;
   border-radius: 4px;
+  background: #f5f4fa;
 }
 
 .icon {
@@ -313,6 +413,7 @@ textarea {
 .skills-list {
   display: flex;
 }
+
 .skills-list .skills-item + .skills-item {
   margin-left: 29px;
 }
