@@ -63,82 +63,88 @@
             </h1>
           </div>
           <a href="" class="hero-link list"
-            ><span class="hero-btn">Заказать услугу</span></a
+            ><span class="hero-btn data-modal-open">Заказать услугу</span></a
           >
         </div>
       </section>
 
       <!-- форма для связи -->
+      <div class="backdrop backdrop-hidden" data-modal>
+        <form class="form" autocomplete="off">
+          <button class="form-close data-modal-close"></button>
+          <p class="form-title">Оставьте свои данные, мы с вами свяжемся</p>
 
-      <form class="form">
-        <button class="form-close"></button>
-        <p class="form-title">Оставьте свои данные, мы с вами свяжемся</p>
+          <label class="form-field">
+            <input type="text" name="name" class="form-input" placeholder=" " />
+            <span class="form-label">Имя</span>
+            <svg
+              width="18"
+              height="18"
+              xmlns="http://www.w3.org/2000/svg"
+              class="form-icon"
+            >
+              <path
+                d="M9 9a3 3 0 100-6 3 3 0 100 6zm0 1.5c-2.003 0-6 1.005-6 3v.75c0 .412.337.75.75.75h10.5c.412 0 .75-.338.75-.75v-.75c0-1.995-3.998-3-6-3z"
+              />
+            </svg>
+          </label>
 
-        <label class="form-field">
-          <input type="text" name="name" class="form-input" placeholder=" " />
-          <span class="form-label">Имя</span>
-          <svg
-            width="18"
-            height="18"
-            xmlns="http://www.w3.org/2000/svg"
-            class="form-icon"
-          >
-            <path
-              d="M9 9a3 3 0 100-6 3 3 0 100 6zm0 1.5c-2.003 0-6 1.005-6 3v.75c0 .412.337.75.75.75h10.5c.412 0 .75-.338.75-.75v-.75c0-1.995-3.998-3-6-3z"
+          <label class="form-field">
+            <input type="tel" name="tel" class="form-input" placeholder=" " />
+            <span class="form-label">Телефон</span>
+            <svg
+              class="form-icon"
+              width="18"
+              height="18"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M13.996 11.123l-1.838-.21a1.441 1.441 0 00-1.187.412l-1.332 1.332a10.888 10.888 0 01-4.769-4.77L6.21 6.55a1.44 1.44 0 00.413-1.187l-.21-1.824a1.448 1.448 0 00-1.44-1.28H3.72c-.818 0-1.498.68-1.448 1.498.384 6.18 5.326 11.115 11.5 11.499.817.05 1.498-.63 1.498-1.448v-1.252a1.434 1.434 0 00-1.274-1.432z"
+              />
+            </svg>
+          </label>
+
+          <label class="form-field">
+            <input
+              type="email"
+              name="mail"
+              class="form-input"
+              placeholder=" "
             />
-          </svg>
-        </label>
+            <span class="form-label">Почта</span>
+            <svg
+              class="form-icon"
+              width="18"
+              height="18"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15 3H3c-.825 0-1.492.675-1.492 1.5l-.008 9c0 .825.675 1.5 1.5 1.5h12c.825 0 1.5-.675 1.5-1.5v-9c0-.825-.675-1.5-1.5-1.5zm-.3 3.188L9.398 9.502a.759.759 0 01-.796 0L3.3 6.188a.637.637 0 11.675-1.08L9 8.25l5.025-3.143a.637.637 0 11.675 1.08z"
+              />
+            </svg>
+          </label>
 
-        <label class="form-field">
-          <input type="tel" name="tel" class="form-input" placeholder=" " />
-          <span class="form-label">Телефон</span>
-          <svg
-            class="form-icon"
-            width="18"
-            height="18"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M13.996 11.123l-1.838-.21a1.441 1.441 0 00-1.187.412l-1.332 1.332a10.888 10.888 0 01-4.769-4.77L6.21 6.55a1.44 1.44 0 00.413-1.187l-.21-1.824a1.448 1.448 0 00-1.44-1.28H3.72c-.818 0-1.498.68-1.448 1.498.384 6.18 5.326 11.115 11.5 11.499.817.05 1.498-.63 1.498-1.448v-1.252a1.434 1.434 0 00-1.274-1.432z"
-            />
-          </svg>
-        </label>
+          <label class="form-comment">
+            <textarea name="comment" rows="10" class="textarea" placeholder=" ">
+            </textarea>
+            <span class="comment">Коментарий</span>
+          </label>
 
-        <label class="form-field">
-          <input type="email" name="mail" class="form-input" placeholder=" " />
-          <span class="form-label">Почта</span>
-          <svg
-            class="form-icon"
-            width="18"
-            height="18"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M15 3H3c-.825 0-1.492.675-1.492 1.5l-.008 9c0 .825.675 1.5 1.5 1.5h12c.825 0 1.5-.675 1.5-1.5v-9c0-.825-.675-1.5-1.5-1.5zm-.3 3.188L9.398 9.502a.759.759 0 01-.796 0L3.3 6.188a.637.637 0 11.675-1.08L9 8.25l5.025-3.143a.637.637 0 11.675 1.08z"
-            />
-          </svg>
-        </label>
+          <label class="form-checkbox">
+            <input type="checkbox" name="checkbox" class="checkbox" />
 
-        <label class="form-comment">
-          <textarea name="comment" rows="10" class="textarea" placeholder=" ">
-          </textarea>
-          <span class="comment">Коментарий</span>
-        </label>
+            <span class="check-icon"></span>
+            Соглашаюсь с рассылкой и принимаю
+            <a href="" class="policy-link">
+              Условия договора
+            </a>
+          </label>
 
-        <label class="form-checkbox">
-          <input type="checkbox" name="checkbox" class="checkbox" />
-
-          <span class="check-icon"></span>
-          Соглашаюсь с рассылкой и принимаю
-          <a href="" class="policy-link">
-            Условия договора
-          </a>
-        </label>
-
-        <div class="form-submit">
-          <button type="submit" class="submit">Отправить</button>
-        </div>
-      </form>
+          <div class="form-submit">
+            <button type="submit" class="submit">Отправить</button>
+          </div>
+        </form>
+      </div>
 
       <!--section soft-tech skils-->
       <section class="skills">
@@ -564,5 +570,6 @@
         <p class="footer-copyright list">2020 | Developed by GoIT Students</p>
       </section>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
